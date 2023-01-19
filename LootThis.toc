@@ -1,0 +1,14 @@
+## Interface: 40300
+## Title: LootThis
+## Notes: Automatically confirm BoP items when in a dungeon solo
+## Author: GovtGeek
+## Version: 4.3.0.001
+## X-Curse-Packaged-Version: version-4.1.0.0001
+## X-Curse-Project-Name: LootThis
+## X-Curse-Project-ID: lootthis
+## X-Curse-Repository-ID: wow/lootthis/mainline
+## X-Curse-Packaged-Version: version-4.3.0.001
+## X-Curse-Project-Name: LootThis
+## X-Curse-Project-ID: lootthis
+## X-Curse-Repository-ID: wow/lootthis/mainline
+LootThis.lua
