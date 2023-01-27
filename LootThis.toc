@@ -2,5 +2,5 @@
 ## Title: LootThis
 ## Notes: Automatically confirm BoP items when in a dungeon solo
 ## Author: GovtGeek
-## Version: 3.0.4.1
+## Version: 3.0.4.001
 LootThis.lua
