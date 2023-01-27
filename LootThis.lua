@@ -1,14 +1,15 @@
-local f = CreateFrame("Frame")
+local f = CreateFrame("Frame", "LootThisFrame")
 f:RegisterEvent("LOOT_BIND_CONFIRM")
 f:SetScript("OnEvent", function(this, event, ...)
     if event == "LOOT_BIND_CONFIRM" then
 	--DEFAULT_CHAT_FRAME:AddMessage("Automatically confirming loot bind")
 	slotID = ...
-	if IsInInstance() == 1 then
+	if IsInInstance() then
+    	--DEFAULT_CHAT_FRAME:AddMessage("Detected instance")
 	    local autoconfirm = false
 	    local onlineInZone = false
 	    local i = 1
-	    if GetNumPartyMembers() == 0 then autoconfirm = true end -- Autoconfirm when in an instance solo
+	    if GetNumGroupMembers() == 0 then autoconfirm = true end -- Autoconfirm when in an instance solo
 	    if autoconfirm ~= true then
 	    -- Autoconfirm if no one is in the instance or if everyone is offline
 		local members = GetNumRaidMembers()
