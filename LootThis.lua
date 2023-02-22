@@ -12,13 +12,13 @@ f:SetScript("OnEvent", function(this, event, ...)
 	    if GetNumGroupMembers() == 0 then autoconfirm = true end -- Autoconfirm when in an instance solo
 	    if autoconfirm ~= true then
 	    -- Autoconfirm if no one is in the instance or if everyone is offline
-		local members = GetNumRaidMembers()
+		local members = GetNumGroupMembers()
 		if members > 1 then
 		    local myZone = GetRealZoneText()
 		    local myName = GetUnitName("player")
 		    for i = 1, members do
-			name, _, _, _, _, _, zone, online = GetRaidRosterInfo(i)
-			if online == 1 and zone == myZone and name ~= myName then onlineInZone = true end
+                name, _, _, _, _, _, zone, online = GetRaidRosterInfo(i)
+    			if online == 1 and zone == myZone and name ~= myName then onlineInZone = true end
 		    end
 		    if onlineInZone ~= true then autoconfirm = true end
 		end
