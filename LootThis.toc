@@ -1,6 +1,6 @@
-## Interface: 30401
+## Interface: 30402
 ## Title: LootThis
 ## Notes: Automatically confirm BoP items when in a dungeon solo
 ## Author: GovtGeek
-## Version: 3.4.1.002
+## Version: 3.4.2.001
 LootThis.lua
