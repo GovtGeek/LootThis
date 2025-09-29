@@ -24,15 +24,27 @@ f:SetScript("OnEvent", function(this, event, ...)
 				end
 			end
 			if autoconfirm == true then
-				for i = 1, STATICPOPUP_NUMDIALOGS do
-					local frame = _G["StaticPopup"..i]
-					if frame.which == "LOOT_BIND" and frame:IsVisible() then StaticPopup_OnClick(frame, 1) end
+				if STATICPOPUP_NUMDIALOGS then
+					for i = 1, STATICPOPUP_NUMDIALOGS do
+						local frame = _G["StaticPopup"..i]
+						if frame.which == "LOOT_BIND" and frame:IsVisible() then StaticPopup_OnClick(frame, 1) end
+					end
+				else
+					StaticPopup_ForEachShownDialog(function(frame)
+						if frame.which == "LOOT_BIND" and frame:IsVisible() then StaticPopup_OnClick(frame, 1) end
+					end)
 				end
 				this:UnregisterEvent("LOOT_BIND_CONFIRM")
 				LootSlot(slotID)
-				for i = 1, STATICPOPUP_NUMDIALOGS do
-					local frame = _G["StaticPopup"..i]
-					if frame.which == "LOOT_BIND" and frame:IsVisible() then StaticPopup_OnClick(frame, 1) end
+				if STATICPOPUP_NUMDIALOGS then
+					for i = 1, STATICPOPUP_NUMDIALOGS do
+						local frame = _G["StaticPopup"..i]
+						if frame.which == "LOOT_BIND" and frame:IsVisible() then StaticPopup_OnClick(frame, 1) end
+					end
+				else
+					StaticPopup_ForEachShownDialog(function(frame)
+						if frame.which == "LOOT_BIND" and frame:IsVisible() then StaticPopup_OnClick(frame, 1) end
+					end)
 				end
 				ConfirmLootSlot(slotID)
 				this:RegisterEvent("LOOT_BIND_CONFIRM")
