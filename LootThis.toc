@@ -1,6 +1,6 @@
-## Interface: 50501
+## Interface: 50502
 ## Title: LootThis
 ## Notes: Automatically confirm BoP items when in a dungeon solo
 ## Author: GovtGeek
-## Version: 5.5.0.1
+## Version: 5.5.0.2
 LootThis.lua
